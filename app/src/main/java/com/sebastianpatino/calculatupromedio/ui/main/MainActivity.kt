@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.util.Log
 import com.sebastianpatino.calculatupromedio.databinding.ActivityMainBinding
 import kotlin.math.roundToInt
-
+/*
+* Punto 1 practica 1
+* */
 class MainActivity : AppCompatActivity() {
     private lateinit var mainBinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
