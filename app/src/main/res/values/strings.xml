@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">APP Calculate</string>
+    <string name="title">Calcula tu promedio</string>
+    <string name="message1">Ingresa la nota de la práctica de laboratorio</string>
+    <string name="note60">Nota del 60%</string>
+    <string name="message2">Ingresa la nota del avance 1</string>
+    <string name="note7">Nota del 7%</string>
+    <string name="message3">Ingresa la nota del avance 2</string>
+    <string name="message4">Ingrese la nota del proyecto final</string>
+    <string name="note8">Nota del 8%</string>
+    <string name="note25">Nota del 25%</string>
+    <string name="calculate">Calcular</string>
+    <string name="clear">0</string>
+</resources>
