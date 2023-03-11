@@ -6,7 +6,7 @@ import android.util.Log
 import com.sebastianpatino.calculatupromedio.databinding.ActivityMainBinding
 import kotlin.math.roundToInt
 /*
-* Punto 1 practica 1
+* Punto 1 practica 2
 * */
 class MainActivity : AppCompatActivity() {
     private lateinit var mainBinding: ActivityMainBinding
