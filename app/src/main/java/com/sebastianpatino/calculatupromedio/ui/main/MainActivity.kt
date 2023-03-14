@@ -25,14 +25,19 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.prom.observe(this, promObserver)
 
         val errorObserver = Observer<Int> { error ->
-            if (error == 1) {
-                mainBinding.note60TextInputLayout.error = "Nota no valida"
-            }else if (error == 2){
-                mainBinding.note7TextInputLayout.error = "Nota no valida"
-            }else if (error == 3) {
-                mainBinding.note8TextInputLayout.error = "Nota no valida"
-            }else {
-                mainBinding.note25TextInputLayout.error = "Nota no valida"
+            when (error) {
+                1 -> {
+                    mainBinding.note60TextInputLayout.error = "Nota no valida"
+                }
+                2 -> {
+                    mainBinding.note7TextInputLayout.error = "Nota no valida"
+                }
+                3 -> {
+                    mainBinding.note8TextInputLayout.error = "Nota no valida"
+                }
+                else -> {
+                    mainBinding.note25TextInputLayout.error = "Nota no valida"
+                }
             }
 
         }
@@ -40,14 +45,19 @@ class MainActivity : AppCompatActivity() {
 
 
         val no_errorObserver = Observer<Int> { noerror ->
-            if (noerror == 1) {
-                mainBinding.note60TextInputLayout.error = null
-            }else if (noerror == 2){
-                mainBinding.note7TextInputLayout.error = null
-            }else if (noerror == 3) {
-                mainBinding.note8TextInputLayout.error = null
-            }else {
-                mainBinding.note25TextInputLayout.error = null
+            when (noerror) {
+                1 -> {
+                    mainBinding.note60TextInputLayout.error = null
+                }
+                2 -> {
+                    mainBinding.note7TextInputLayout.error = null
+                }
+                3 -> {
+                    mainBinding.note8TextInputLayout.error = null
+                }
+                else -> {
+                    mainBinding.note25TextInputLayout.error = null
+                }
             }
         }
         mainViewModel.noerror.observe(this, no_errorObserver)
@@ -59,7 +69,7 @@ class MainActivity : AppCompatActivity() {
             val numero4 = mainBinding.note25EditText.text.toString().toDoubleOrNull()
 
             mainViewModel.prom(numero1,numero2,numero3,numero4)
-            
+
         }
     }
 }
