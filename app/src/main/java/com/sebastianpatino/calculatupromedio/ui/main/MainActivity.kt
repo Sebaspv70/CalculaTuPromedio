@@ -59,16 +59,16 @@ class MainActivity : AppCompatActivity() {
                     mainBinding.note25TextInputLayout.error = null
                 }
             }
+
         }
         mainViewModel.noerror.observe(this, no_errorObserver)
-
         mainBinding.calculateButton.setOnClickListener {
             val numero1 = mainBinding.note60EditText.text.toString().toDoubleOrNull()
             val numero2 = mainBinding.note7EditText.text.toString().toDoubleOrNull()
             val numero3 = mainBinding.note8EditText.text.toString().toDoubleOrNull()
             val numero4 = mainBinding.note25EditText.text.toString().toDoubleOrNull()
 
-            mainViewModel.prom(numero1,numero2,numero3,numero4)
+            mainViewModel.prom(numero1, numero2, numero3, numero4)
 
         }
     }
